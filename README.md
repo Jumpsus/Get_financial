@@ -17,6 +17,7 @@ But if you need to analyze Stock Data from US zone I suggest you to use yahoo fi
 3.Beautifulsoup - to manage html and xml data from urllib.request
 ---
 4.json - to covert json to dictionary data in python
+---
 
 # How to use ?
 Before using this function you need to know "Symbol" of stock you looking for.
@@ -28,6 +29,6 @@ Airports of Thailand PCL --> AOT.BK
 If you don't sure about Symbol youcan search in this site https://www.reuters.com/search
 
 After youget Symbol you can run code by this command
-'''
+```
 df = get_income_statement(Stock)
-'''
+```
