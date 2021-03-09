@@ -10,10 +10,10 @@ When compare to other financial website, Reuters has more complete financial inf
 But if you need to analyze Stock Data from US zone I suggest you to use yahoo finance library, It will make your life much more easy.
 
 # Library that I used:
-1.pandas - to store final information. 
-1.urllib.request - to request information from website 
-1.Beautifulsoup - to manage html and xml data from urllib.request
-1.json - to covert json to dictionary data in python
+1. pandas - to store final information. 
+2. urllib.request - to request information from website 
+3. Beautifulsoup - to manage html and xml data from urllib.request
+4. json - to covert json to dictionary data in python
 
 # How to use ?
 Before using this function you need to know "Symbol" of stock you looking for.
