@@ -15,11 +15,11 @@ Stock = "AOT.BK"
 
 
 def get_income_statement(Stock):
-    url = 'https://www.reuters.com/companies/'+ Stock +'/financials'
-    read = ur.urlopen(url).read()
+    url = 'https://www.reuters.com/companies/'+ Stock +'/financials' #url for request data
+    read = ur.urlopen(url).read() #request data from web inthis process you need to connect internet
     soup = BeautifulSoup(read,'lxml')
-    B = json.loads(soup.find_all('script')[4].string)   
-    df = pd.DataFrame(columns=B['props']['initialState']['markets']['financials']['financial_tables']['income_annual_tables'][0]['headers'])
+    B = json.loads(soup.find_all('script')[4].string) #convert json script to dictionary, [4] is position of script that content financial data
+    df = pd.DataFrame(columns=B['props']['initialState']['markets']['financials']['financial_tables']['income_annual_tables'][0]['headers']) #create dataframe
     for i in B['props']['initialState']['markets']['financials']['financial_tables']['income_annual_tables'][0]['rows']:
         name = i['name']
         for j in i['data']:
