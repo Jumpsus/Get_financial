@@ -6,7 +6,7 @@ When I decide to analyze or screen fundamental of stock in the market (especiall
 So I decide to reduce my manual task as much as possible by writing this script.
 
 # Why Reuters ?
-When compare to other financial website, Reuters has more complete financial information i.e. incomestatment of some stock before IPO.
+When compare to other financial website, Reuters has more complete financial information i.e. income statment of some stock before IPO.
 But if you need to analyze Stock Data from US zone I suggest you to use yahoo finance library, It will make your life much more easy.
 
 # Library that I used:
@@ -24,7 +24,7 @@ For example,
 
 If you don't sure about Symbol youcan search in this site https://www.reuters.com/search
 
-After youget Symbol you can run code by this command
+After you get Symbol you can run code by this command
 
 ```
 df = get_income_statement(Stock)
