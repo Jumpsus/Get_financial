@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 """
 Created on Mon Mar  8 14:49:39 2021
-
 @author: Jumpsus
 """
 import pandas as pd
@@ -9,10 +8,9 @@ from bs4 import BeautifulSoup
 import urllib.request as ur
 import json
 
-Stock = "AOT.BK" 
+# Stock = "AOT.BK" 
 # Stock Symbol in Reuter Website.
 #   If you not sure Symbols of stock, Do mannual search in https://www.reuters.com
-
 
 def get_income_statement(Stock):
     url = 'https://www.reuters.com/companies/'+ Stock +'/financials' #url for request data
@@ -27,5 +25,20 @@ def get_income_statement(Stock):
                 df.loc[name,j['date']] = j['value']
             except:
                 print(name," have missing data")
-    return df    
+    return df
+
+Stock = input("Stock That You Want to Search:")
+try:
+    Result = get_income_statement(Stock)
+except:
+    try:
+        Stock = Stock + '.OQ'
+        Result = get_income_statement(Stock)
+    except:
+        pass
+
+try:
+    print(Result)
+except:
+    print("Something error: Please Check Symbol with reuters.com")
 
